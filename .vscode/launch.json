@@ -1,0 +1,27 @@
+/* C/C++ 디버그 옵션 설정 JSON - 실행 -> 구성추가 -> c++(GDB/LLDB) -> g++.exe... 로 생성할 수 있음 */
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name":"gcc.exe - 활성 파일 빌드 및 디버그",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${workspaceFolderBasename}.exe", // 디버그를 진행할 실행 파일 이름 -  기본값: ${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "args": [/* "arg1", "arg2" */], // 명령줄 인수를 추가하여 실행할 때, 이곳에 입력 변수를 써준다.
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}", // 작업 폴더 경로
+      "environment": [],
+      "externalConsole": false, // true -> 디버깅 과정을 별도의 터미널에서 출력, false -> 디버깅 과정을 vscode 터미널에 출력
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\Program Files\\mingw64\\bin\\gdb.exe", // gdb 경로
+      "setupCommands": [
+        {
+          "description": "gdb에 자동 서식 지정 사용",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: gcc.exe 활성 파일 빌드" // 디버깅 전에 먼저 수행되어야 하는 동작. 당연히 빌드이다.
+    }
+  ]
+}

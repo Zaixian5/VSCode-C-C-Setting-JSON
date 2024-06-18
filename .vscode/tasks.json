@@ -1,0 +1,31 @@
+/* C/C++ 컴파일 옵션 설정 JSON - C/C++ 파일 최초 컴파일시 자동 생성됨 */
+{
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "C/C++: gcc.exe 활성 파일 빌드",
+      "command": "C:/Program Files/mingw64/bin/gcc.exe", // 명령어(gcc) - cpp일 경우 명령어를 g++.exe 경로로 설정하고 아래 옵션 설정
+      "args": [
+        // 아래는 gcc 컴파일 옵션임 - gcc 명령어 참조
+        "-fdiagnostics-color=always",
+        "-g", // 디버그 심볼
+        "-Wall", // 모든 경고 사항 표시 - 기본값: 없음
+        "${fileDirname}\\*.c", // 디렉토리내 모든 c 파일을 컴파일 - 기본값: "${file}",
+        "-o", // 실행 파일 이름 설정(혹은 목적 파일 생성) 옵션
+        "${fileDirname}\\${workspaceFolderBasename}.exe" // 디렉토리의 이름으로 실행파일 생성 - 기본값: "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:/Program Files/mingw64/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "디버거에서 생성된 작업입니다."
+    }
+  ],
+  "version": "2.0.0"
+}

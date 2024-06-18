@@ -1,0 +1,19 @@
+/* C/C++ 전역 설정 JSON - ctrl+shift+p(명령팔레트)에서 C/C++ 구성편집(UI) 검색하여 편집할 수도 있음 */
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**" // 헤더파일을 포함할 경로를 작업폴더로 설정. 다른 경로에 있는 헤더파일을 추가할 경우 경로를 추가해 주면 된다.
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/Program Files/mingw64/bin/gcc.exe", // 컴파일러 경로. cpp일 경우, g++.exe 경로로 설정
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
